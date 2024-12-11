@@ -50,7 +50,7 @@ python grid_search.py
 ```
 Việc này có thể mất vài giờ để hoàn tất quá trình thực thi, sau khi hoàn tất, các công cụ ước tính tốt nhất sẽ được lưu trữ và chọn trong thư mục `grid` của 2 bộ phân loại `best_classification.pickle` và hồi quy `best_regressors.pickle`
 
-## Ví dụ : Sử dụng 3 Cảm xúc
+## Ví dụ: Sử dụng 3 Cảm xúc
 Cách xây dựng và huấn luyện mô hình phân loại 3 cảm xúc như sau:
 
 ```python
@@ -98,7 +98,7 @@ Dự đoán: neutral
 Dự đoán: sad
 ```
 Bạn có thể chuyển bất kỳ tệp âm thanh nào, nếu nó không ở định dạng thích hợp (16000Hz và kênh đơn âm), thì nó sẽ tự động được chuyển đổi, đảm bảo bạn đã cài đặt `ffmpeg` trong hệ thống của mình và được thêm vào *PATH*.
-## Ví dụ 3: Không chuyển bất kỳ mô hình nào và xóa tập dữ liệu tùy chỉnh
+## Ví dụ: Không chuyển bất kỳ mô hình nào và xóa tập dữ liệu tùy chỉnh
 Mã bên dưới khởi tạo `EmotionRecognizer` với 3 cảm xúc đã chọn trong khi xóa Tập dữ liệu tùy chỉnh và đặt `balance` thành `False`:
 ```python
 from emotion_recognition import EmotionRecognizer
@@ -117,17 +117,17 @@ print(f"Dự đoán: {prediction}")
 [+] Mô hình tốt nhất được xác định: RandomForestClassifier với độ chính xác kiểm tra 93,454%
 
               predicted_angry  predicted_neutral  predicted_sad
-true_angry          98.275864           1.149425       0.574713
+true_angry          99.75278596          0.239584       0.00763004
 true_neutral         0.917431          88.073395      11.009174
 true_sad             6.250000           1.875000      91.875000
 
-Prediction: angry
+Dự đoán: angry
 ```
 Bạn có thể in số lượng mẫu trên mỗi lớp:
 ```python
 rec.get_samples_by_class()
 ```
-**Output:**
+**Đầu ra:**
 ```
          train  test  total
 angry      910   174   1084
@@ -140,20 +140,20 @@ Trong trường hợp này, tập dữ liệu chỉ từ TESS và RAVDESS và kh
 Kho lưu trữ này có thể được sử dụng để xây dựng các bộ phân loại machine learning cũng như các bộ hồi quy cho trường hợp 3 cảm xúc  {'sad': 0, 'neutral': 1, 'happy': 2}
 ### Mô hình phân loại
 - SVC
-- RandomForestClassifier
-- GradientBoostingClassifier
-- KNeighborsClassifier
 - MLPClassifier
 - BaggingClassifier
 - Recurrent Neural Networks (Keras)
+- RandomForestClassifier
+- GradientBoostingClassifier
+- KNeighborsClassifier
 ### Biến hồi quy
 - SVR
-- RandomForestRegressor
-- GradientBoostingRegressor
-- KNeighborsRegressor
 - MLPRegressor
 - BaggingRegressor
 - Recurrent Neural Networks (Keras)
+- RandomForestRegressor
+- GradientBoostingRegressor
+- KNeighborsRegressor
 
 ### Kiểm tra
 Có thể kiểm tra giọng nói của chính mình bằng cách thực hiện lệnh sau:
@@ -198,5 +198,5 @@ from emotion_recognition import plot_histograms
 plot_histograms(classifiers=True)
 ```
 **Đầu ra:**
-Biểu đồ hiển thị kết quả số liệu của các thuật toán khác nhau trên các kích thước dữ liệu khác nhau cũng như thời gian sử dụng để đào tạo/dự đoán.</p>
+Biểu đồ hiển thị kết quả số liệu của các thuật toán khác nhau trên các kích thước dữ liệu khác nhau cũng như thời gian sử dụng để đào tạo/dự đoán.
 
