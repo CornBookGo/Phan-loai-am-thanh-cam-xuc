@@ -33,7 +33,7 @@ Tập lưu trữ đã sử dụng 4 bộ dữ liệu (bao gồm cả tập dữ 
 
 
 ### Cảm xúc để nhận diện
-Có 9 cảm xúc có sẵn: "neutral", "calm", "happy" "sad", "angry", "fear", "disgust", "ps" (ngạc nhiên) and "boredom".
+Có 9 cảm xúc có sẵn: "neutral", "calm", "happy" "sad", "angry", "fear", "disgust", "ps" (ngạc nhiên) và "boredom".
 ## Trích xuất tính năng
 Trích xuất đặc trưng là phần chính của hệ thống nhận dạng cảm xúc lời nói. Về cơ bản, nó được thực hiện bằng cách thay đổi dạng sóng giọng nói thành dạng biểu diễn tham số ở tốc độ dữ liệu tương đối thấp hơn.
 Trong kho lưu trữ này đã sử dụng các tính năng được sử dụng nhiều nhất hiện có trong thư viện [librosa](https://github.com/librosa/librosa) bao gồm:
