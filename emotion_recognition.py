@@ -286,7 +286,7 @@ class EmotionRecognizer:
         total.append(sum(train_samples) + sum(test_samples))
         train_samples.append(sum(train_samples))
         test_samples.append(sum(test_samples))
-        return pd.DataFrame(data={"train": train_samples, "test": test_samples, "total": total}, index=self.emotions + ["total"])
+        return pd.DataFrame(data={"train": train_samples, "test": test_samples, "tổng": total}, index=self.emotions + ["tổng"])
 
     def get_random_emotion(self, emotion, partition="train"):
         if partition == "train":
